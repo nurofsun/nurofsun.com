@@ -13,6 +13,7 @@
         </div>
         {{ partial "foot.html" . }}
         {{ partial "scripts.html" . }}
+        {{- template "_internal/google_analytics.html" . -}}
         {{ block "scripts" . }}
         {{ end }}
     </body>
