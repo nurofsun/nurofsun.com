@@ -1,0 +1,27 @@
+{{ define "main" }}
+<header>
+    {{- partial "component/navbar.html" . }}
+</header>
+<main id="home" class="px-4 max-w-screen-lg mx-auto">
+    {{ partial "hero.html" . }}
+    <div class="flex flex-row flex-wrap">
+        <div class="w-full md:w-6/12">
+            <div class="pr-2">
+                {{ partial "latestPosts.html" . }}
+            </div>
+        </div>
+        <div class="w-full md:w-6/12">
+            <section id="projects" class="md:pl-2">
+                <header class="flex flex-row items-center justify-between py-4">
+                    <h2 class="minortitle text-lg md:text-xl font-bold inline-block mb-2 border-b-2 border-gray-200 pb-1">Projects</h2>
+                </header>
+                {{ partial "projectList.html" . }}
+            </section>
+
+            <section id="tags">
+                {{ partial "tags.html" . }}
+            </section>
+        </div>
+    </div>
+</main>
+{{ end }}

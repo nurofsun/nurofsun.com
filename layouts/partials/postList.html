@@ -1,0 +1,29 @@
+<article class="relative shadow-lg mb-4 border-4 border-gray-800 p-3 
+    rounded-lg overflow-hidden
+    hover:bg-gray-800 hover:text-gray-50 fill-current 
+    hover:shadow-none hover:border-0 hover:border-opacity-0 transition duration-300">
+    <header>
+        <h2 class="text-lg md:text-xl font-bold">{{ .Title }}</h2>
+    </header>
+
+    <footer>
+        <div class="flex flex-row items-center justify-between text-sm text-gray-500 mt-3">
+            <p class="date inline-flex">
+                <span class="icon mr-2">
+                    {{- $calendarIcon := resources.Get "icons/calendar.svg" -}}
+                    <img class="injectable w-5 h-auto" src="{{ $calendarIcon.RelPermalink }}" alt="Post Date">
+                </span>
+                <time>{{ .Date.Format "January 2, 2006" }}</time>
+            </p>
+            {{ with .Params.Tags }}
+                <a class="tag is-primary is-light is-medium" href="{{ "tags/" | absURL }}{{ index . 0 | urlize }}" target="_blank">
+                    #{{ index . 0 }}
+                </a>
+            {{ end }}
+        </div>
+        <a class="absolute inset-0" href="{{ .Permalink }}" title="{{ .Title }}">
+            <span class="invisible">{{ .Title }}</span>
+        </a>
+    </footer>
+
+</article>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" class="pt-24">
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+    <body class="bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-white">
+        <a href="#root" class="hidden md:block bg-gray-800 rounded-full text-lg p-3 shadow fill-current fixed z-50 bottom-0 right-0 md:m-3">
+            <img class="injectable text-gray-50 w-8 h-auto transform rotate-180" src="/icons/arrowdown.svg" alt="">
+        </a>
+        <div id="root">
+            {{ block "main" . }}
+            {{ end }}
+        </div>
+        {{ partial "foot.html" . }}
+        {{ partial "scripts.html" . }}
+        {{ block "scripts" . }}
+        {{ end }}
+    </body>
+</html>

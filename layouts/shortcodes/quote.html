@@ -1,0 +1,11 @@
+{{ $cite := .Get "cite" }}
+<blockquote class="p-2 bg-gray-900">
+  <p class="py-2 md:py-2">
+    {{ .Inner }}
+  </p>
+  {{ with $cite }}
+    <cite class="block text-xs">
+      {{ $cite }}
+    </cite>
+  {{ end }}
+</blockquote>

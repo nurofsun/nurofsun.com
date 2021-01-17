@@ -1,0 +1,4 @@
+baseURL="https://nurofsun.github.io"
+buildDrafts = false
+publishDir = "public"
+pygmentsUseClasses=true

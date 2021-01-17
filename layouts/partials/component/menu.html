@@ -1,0 +1,31 @@
+<div class="fixed inset-x-0 bottom-0 z-10
+    border-t border-gray-500 border-opacity-50
+    md:border-none md:static bg-white md:bg-transparent
+    flex items-center justify-center md:justify-start
+    md:flex-row" id="navbarMenu">
+    <a class="text-gray-800 text-sm md:text-base
+        font-medium mr-3 p-3
+        hover:text-gray-600
+        hover:underline
+        transition duration-100" 
+        href="/" title="Home">
+        Home
+    </a>
+    {{- $currentPage := . -}}
+    {{- range .Site.Menus.main }}
+    <a class="text-gray-800 text-sm md:text-base
+        font-medium mr-3 p-3
+        hover:text-gray-600
+        hover:underline
+        transition duration-100" 
+       href="{{ .URL }}" title="Home">
+        {{ .Name }}
+    </a>
+    {{ end -}}
+    <a href="#root" class="inline-flex items-center py-1 px-3 md:hidden bg-gray-800 rounded-full fill-current">
+        <img class="injectable text-gray-50 w-6 h-auto transform rotate-180" src="/icons/arrowdown.svg" alt="">
+        <span class="text-gray-50 inline-block font-bold uppercase text-xs">
+            Top
+        </span>
+    </a>
+</div>

@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- google search console verification -->
+<meta name="google-site-verification" content="43nt1z53zjwSDViLuzK_FCLcosM9gqh_W8jZ-NDtXQk" />
+<meta name="title" content="{{ .Site.Title }}">
+{{- if .IsHome }}
+    <meta name="description" content="a place where you can learn more about web development from zero to hero">
+{{ else }}
+    {{- if .Params.Description }}
+        <meta name="description" content="{{ .Params.Description }}">
+    {{ else }}
+        <meta name="description" content="a place where you can learn more about web development from zero to hero">
+    {{ end -}}
+{{ end -}}
+<meta name="keywords" content="html, css, javascript, nodejs, webdevelopment, programming">
+<meta name="author" content="{{ .Site.Params.AuthorName }}">
+{{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+{{- template "_internal/schema.html" . -}}
+{{- template "_internal/opengraph.html" . -}}
+{{- template "_internal/twitter_cards.html" . -}}
+<link rel="stylesheet" href="/styles/style.css" media="all">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="{{ .Permalink }}">
+{{- if .IsHome }}
+    <title>{{ $.Site.Title }}</title>
+{{- else -}}
+    <title>{{ .Title }} | {{ $.Site.Title }}</title>
+{{- end -}}

@@ -1,0 +1,55 @@
+{{ define "main" }}
+<header>
+	{{ partial "component/navbar.html" . }}
+</header>
+<main id="contact" class="min-h-screen h-screen bg-white">
+	<section class="container mx-auto px-4 pt-24 max-w-screen-sm">
+		<header class="mb-3">
+			<h2 class="text-4xl font-bold">Hello,<br> Would you like to work with me?</h2>
+			<p class="text-lg">So, tell me what you need!</p>
+		</header>
+		<div class="contact-form py-5">
+			<form action="https://getform.io/f/6b3695c9-5047-4841-9bda-69f67f220dc3" method="POST">
+				<p class="mb-4">
+					<input class="w-full rounded-md p-3 border
+						   border-dove-gray-200 bg-white text-dove-gray-700
+						   transition duration-200
+						   hover:border-dove-gray-500 hover:bg-dove-gray-50
+						   focus:outline-none focus:ring-4
+						   focus:ring-blue-500
+						   focus:ring-opacity-50" 
+						   placeholder="Full Name" type="text" name="name">
+				</p>
+				<p class="mb-4">
+				<input class="w-full rounded-md p-3 border
+						   border-dove-gray-200 bg-white text-dove-gray-700
+						   transition duration-200
+						   hover:border-dove-gray-500 hover:bg-dove-gray-50
+						   focus:outline-none focus:ring-4
+						   focus:ring-blue-500
+						   focus:ring-opacity-50" 
+						   placeholder="example@mail.com" type="email" name="email">
+				</p>
+				<p class="mb-4">
+					<textarea class="w-full h-auto rounded-md p-3 border
+						   border-dove-gray-200 bg-white text-dove-gray-700
+						   transition duration-200
+						   hover:border-dove-gray-500 hover:bg-dove-gray-50
+						   focus:outline-none focus:ring-4
+						   focus:ring-blue-500
+						   focus:ring-opacity-50" 
+						placeholder="Write something here..." type="text" name="message"></textarea>
+				</p>
+				<p>
+					<button class="overflow-hidden rounded-md p-3
+						   focus:outline-none focus:ring-4
+						   focus:ring-blue-500
+						   focus:ring-opacity-50 
+							border border-dove-gray-800" 
+						type="submit">Send Message</button>
+				</p>
+			</form>
+		</div>
+	</section>
+</main>
+{{ end }}

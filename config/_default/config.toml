@@ -1,0 +1,29 @@
+baseURL = "http://localhost:1313"
+title = "Nurofsun"
+buildDrafts = true
+publishDir = "public"
+staticDir = "assets"
+pygmentsUseClasses = true
+
+[menu]
+  [[menu.main]]
+    identifier = "blog"
+    title = "Articles"
+    name = "Articles"
+    url = "/blog"
+  [[menu.main]]
+    identifier = "contact"
+    title = "Contact"
+    name = "Contact"
+    url = "/contact"
+
+[permalinks]
+   article = "/:slug/"
+
+[outputs]
+  home = ["HTML", "JSON", "RSS"]
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5

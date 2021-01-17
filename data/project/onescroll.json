@@ -1,0 +1,7 @@
+{
+  "Name": "OneScroll",
+  "Image": "/images/onescroll.svg",
+  "Description": "a Lightweight and no dependencies javascript library, that allow you to enable scroll fullpage feature.",
+  "SourceUrl": "https://github.com/nurofsun/onescroll",
+  "DemoUrl": "https://onescroll.vercel.app"
+}

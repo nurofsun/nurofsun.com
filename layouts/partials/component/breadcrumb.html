@@ -1,0 +1,33 @@
+<nav class="breadcrumb my-3">
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": {{ with .CurrentSection }}{{ .Title }}{{ end }},
+          "item": {{ with .CurrentSection }}{{ .Permalink }}{{ end }}
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ .Title }}
+        }]
+      }
+  </script>
+  <ul class="text-sm text-gray-800 text-opacity-50 flex flex-row items-center whitespace-nowrap overflow-hidden">
+    <li class="mr-2 inline-flex items-center">
+      <a class="inline-block mr-2" href="/">Home</a>
+      /
+    </li>
+    <li class="mr-2 inline-flex items-center">
+      {{ with .Parent }}
+        <a class="inline-block mr-2" href="{{ .Permalink }}">{{ .Title }}</a>
+        /
+      {{ end }}
+    </li>
+    <li class="is-active">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+  </ul>
+</nav>

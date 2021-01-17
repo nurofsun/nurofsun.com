@@ -1,0 +1,28 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+{{ $lazy := .Get "lazy" }}
+{{ $caption := .Get "caption" }}
+{{ $align := .Get "align" }}
+<figure class="w-full rounded-md {{ with $align }} {{ $align }} {{ end }}">
+  {{ $originalImage := .Page.Resources.GetMatch (printf "*%s*" ($src)) }}
+  {{- with $lazy }} 
+    {{ $filteredImage := $originalImage.Fit "60x40" }}
+    {{ $filteredImage = $filteredImage.Filter (images.GaussianBlur 6) }}
+    <img 
+      src="{{ $filteredImage.RelPermalink }}" 
+      data-src="{{ $originalImage.RelPermalink }}"
+      alt="{{ $alt }}"
+      class="lazy w-full overflow-hidden rounded-md h-auto"
+      >
+  {{ else }}
+    <img 
+      src="{{ $originalImage.RelPermalink }}" 
+      alt="{{ $alt }}"
+      >
+  {{ end -}}
+  {{- with $caption }}
+    <figcaption>
+      {{- . -}}
+    </figcaption>
+  {{ end -}}
+</figure>

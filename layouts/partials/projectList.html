@@ -1,0 +1,43 @@
+<ul>
+    {{ range .Site.Data.project }}
+    <li class="pt-2 pb-3 border-b border-gray-100">
+        <article id="onescroll.js" class="flex flex-row justify-between items-center">
+            <header class="w-2/12 px-2 mr-3 py-2">
+                <img class="w-full h-auto injectable" src="{{ .Image }}" alt="{{ .Name }}">
+            </header>
+            <div class="w-10/12">
+                <h2 class="text-gray-800 text-lg font-bold mb-1">{{ .Name }}</h2>
+                <p class="text-gray-600 text-sm mb-4">
+                    {{ .Description }}
+                </p>
+                <div class="flex action items-center">
+                    {{ if .SourceUrl }}
+                        <a class="bg-blue-700 mr-3 px-4 py-2 text-xs font-bold text-gray-50
+                        hover:bg-blue-800 focus:ring-2 focus:ring-blue-200 shadow-none outline-none overflow-hidden
+                        rounded" role="button" href="{{ .SourceUrl }}" rel="noopener" target="_blank">
+                            Source
+                        </a>
+                    {{ else }}
+                        <button class="bg-blue-50 mr-3 px-4 py-2 text-xs font-bold text-blue-200 shadow-none outline-none overflow-hidden
+                        rounded" disabled>
+                            Private Source
+                        </button>
+                    {{ end }}
+                    {{ if .DemoUrl }}
+                        <a class="bg-blue-100 px-4 py-2 text-xs font-bold text-blue-800
+                        hover:text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-200 shadow-none outline-none overflow-hidden
+                        rounded" role="button" href="{{ .DemoUrl }}">
+                            Demo
+                        </a>
+                    {{ else }}
+                        <button class="bg-blue-50 px-4 py-2 text-xs font-bold text-blue-200 shadow-none outline-none overflow-hidden
+                        rounded" disabled>
+                            Not Available
+                        </button>
+                    {{ end }}
+                </div>
+            </div>
+        </article>
+    </li>
+    {{ end }}
+</ul>

@@ -1,0 +1,23 @@
+{{ define "main" }}
+<header>
+	{{ partial "component/navbar.html" . }}
+</header>
+<main id="tags" class="max-w-screen-lg mx-auto px-4">
+    <div class="flex flex-row flex-wrap">
+        <section class="feed w-full md:w-8/12">
+            <header class="mb-4">
+                <p class="text-lg md:text-xl">
+                    Showing articles related with {{ .Page.Title }}
+                </p>
+            </header>
+            {{ range .Paginator.Pages }}
+                {{ partial "postList.html" . }}
+            {{ end }}
+            {{ partial "component/pagination.html" . }}
+        </section>
+        <div class="w-full md:w-4/12">
+            {{ partial "sidebar.html" . }}
+        </div>
+    </div>
+</main>
+{{ end }}

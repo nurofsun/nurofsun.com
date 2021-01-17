@@ -1,0 +1,87 @@
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<nav class="flex flex-row items-center text-xs flex-wrap">
+    <a {{ if $pag.HasPrev }}href="{{ $pag.Prev.URL }}"{{ end }} 
+      class="inline-block mr-2 p-2 border border-gray-200
+      {{ if $pag.HasPrev }}
+      {{ else }}
+		bg-gray-800
+		text-white
+      {{ end }}
+      overflow-hidden rounded-md" 
+      aria-label="Previous" {{ if not $pag.HasPrev }} disabled {{ end }}>
+        <span aria-hidden="true">Previous</span>
+    </a>
+    <a {{ if $pag.HasNext }}href="{{ $pag.Next.URL }}"{{ end }} 
+      class="inline-block mr-2 p-2 border border-gray-200
+      {{ if $pag.HasNext }}
+		bg-white
+		order-3
+		hover:bg-gray-800
+		hover:text-white
+		transition
+		duration-300
+      {{ else }}
+		bg-gray-800
+		text-white
+      {{ end }}
+      overflow-hidden rounded-md" 
+      aria-label="Next" {{ if not $pag.HasNext }} disabled {{ end }}>
+      <span aria-hidden="true">Next</span>
+    </a>
+    <ul class="p-0 flex flex-row items-center w-full md:w-auto my-2 md:mt-0">
+      {{ with $pag.First }}
+        <li>
+          <a href="{{ .URL }}" 
+            class="p-2 text-md border border-gray-200 bg-white text-gray-800 hover:bg-gray-800 hover:text-white dark:bg-transparent dark:border-yellow-200 inline-flex mr-2 rounded-lg" 
+            aria-label="First">
+            <span aria-hidden="true">&laquo;&laquo;</span>
+          </a>
+        </li>
+      {{ end }}
+      {{ $ellipsed := false }}
+      {{ $shouldEllipse := false }}
+      {{ range $pag.Pagers }}
+      {{ $right := sub .TotalPages .PageNumber }}
+      {{ $showNumber := or (le .PageNumber 3) (eq $right 0) }}
+      {{ $showNumber := or $showNumber (and (gt .PageNumber (sub $pag.PageNumber 2)) (lt .PageNumber (add $pag.PageNumber 2)))  }}
+      {{ if $showNumber }}
+          {{ $ellipsed = false }}
+          {{ $shouldEllipse = false }}
+      {{ else }}
+          {{ $shouldEllipse = not $ellipsed }}
+          {{ $ellipsed = true }}
+      {{ end }}
+      {{ if $showNumber }}
+      <li>
+        <a class="py-2 px-3 inline-block mr-2 border border-gray-800 rounded-md
+		  hover:bg-gray-800
+		  hover:text-white
+          transition
+          duration-300
+           {{ if eq . $pag }} bg-gray-800 text-white {{ end }}" 
+          href="{{ .URL }}">
+          {{ .PageNumber }}
+        </a>
+      </li>
+      {{ else if $shouldEllipse }}
+      <li>
+        <span class="border-2 border-yellow-200" 
+          aria-hidden="true">
+          &nbsp;&hellip;&nbsp;
+        </span>
+      </li>
+      {{ end }}
+      {{ end }}
+      {{ with $pag.Last }}
+      <li class="page-item">
+          <a href="{{ .URL }}"
+            class="p-2 text-md border border-gray-200 bg-white text-gray-800 hover:bg-gray-800 hover:text-white dark:bg-transparent dark:border-yellow-200 inline-flex mr-2 rounded-lg" 
+            aria-label="Last">
+            &raquo;&raquo;
+          </a>
+      </li>
+      {{ end }}
+    </ul>
+</nav>
+{{ end }}

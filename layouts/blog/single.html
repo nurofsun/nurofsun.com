@@ -1,0 +1,10 @@
+{{ define "main" }}
+<header>
+    {{ partial "component/navbar.html" . }}
+</header>
+<main id="{{ .Name }}" class="max-w-screen-md mx-auto px-4">
+    {{ partial "component/breadcrumb.html" . }}
+    {{ partial "postSingle.html" . }}
+    {{ partial "sidebar.html" . }}
+</main>
+{{ end }}

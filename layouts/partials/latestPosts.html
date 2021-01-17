@@ -1,0 +1,20 @@
+<section id="latestPosts" class="md:px-2">
+
+    <header class="flex flex-row items-center justify-between py-4">
+      <h2 class="minortitle font-bold md:text-xl text-lg border-b-2 border-gray-200 mb-2 pb-1">
+          Latest Posts
+      </h2>
+      <a class="bg-blue-100 text-blue-800 px-4 py-2 overflow-hidden inline-block rounded text-sm font-bold 
+         hover:bg-blue-800 hover:text-white duration-200 transition" 
+          href="/blog" role="button">See All</a>
+    </header>
+
+    <div class="feed">
+        {{ with .Site.GetPage "blog" }}
+          {{ range first 3 .Pages }}
+            {{ partial "postList.html" . }}
+          {{ end }}
+        {{ end }}
+    </div>
+
+</section>
