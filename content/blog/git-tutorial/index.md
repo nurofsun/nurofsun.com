@@ -33,5 +33,4 @@ sudo apt install git
 
 ### Windows
 
-Maybe I will give an external link how to do it.
-
+Maybe I will give an external link how to do it, because there's no windows installed on my laptop, you can [follow this tutorial for installing git on windows](https://phoenixnap.com/kb/how-to-install-git-windows) instead.
