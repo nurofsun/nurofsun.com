@@ -13,14 +13,38 @@ module.exports = {
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
+                        'pre code::before': {
+                            content: 'none',
+                            display: 'none',
+                            height: '0px',
+                            width: '0px'
+                        },
+                        'pre code::after': {
+                            content: 'none',
+                            display: 'none',
+                            height: '0px',
+                            width: '0px'
+                        },
                         '.highlight-extended pre': {
                             marginTop: '0px !important',
-                            marginBottom: '0px !important'
+                            marginBottom: '0px !important',
                         }
                     }
                 },
                 lg: {
                     css: {
+                        'pre code::before': {
+                            content: 'none',
+                            display: 'none',
+                            height: '0px',
+                            width: '0px'
+                        },
+                        'pre code::after': {
+                            content: 'none',
+                            display: 'none',
+                            height: '0px',
+                            width: '0px'
+                        },
                         '.highlight-extended pre': {
                             marginTop: '0px !important',
                             marginBottom: '0px !important'
@@ -29,6 +53,18 @@ module.exports = {
                 },
                 sm: {
                     css: {
+                        'pre code::before': {
+                            content: 'none',
+                            display: 'none',
+                            height: '0px',
+                            width: '0px'
+                        },
+                        'pre code::after': {
+                            content: 'none',
+                            display: 'none',
+                            height: '0px',
+                            width: '0px'
+                        },
                         '.highlight-extended pre': {
                             marginTop: '0px !important',
                             marginBottom: '0px !important'
