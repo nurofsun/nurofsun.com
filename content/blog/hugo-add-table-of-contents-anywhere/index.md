@@ -3,7 +3,7 @@ title: "Hugo Guide: Add Table of Contents In Markdown"
 slug: hugo-add-table-of-contents-markdown
 date: 2021-01-18T08:03:39+07:00
 lastmod: 2021-01-18T08:03:39+07:00
-description: ""
+description: "Guide how to add table of contents in the middle of your article body with custom shortcode"
 tags: ["hugo"]
 featured: "./cover.png"
 author: Nurahmat
