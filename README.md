@@ -1,7 +1,18 @@
 # Personal Website
-Repository of my personal website powered by github page, and using static site generator [Hugo](https://gohugo.io). I intended to create this website because I wanna keep my journey as software engineer as well and as my first reference if I got stuck with programming stuff.
 
-# Future Changes
-[x] Light as the main theme
-[ ] Adding dark theme and toggle
-[ ] Well-structured
+This is my personal website hosted on netlify, previously on github pages.
+Intented for keeping my projects and some blog posts for sharing my
+knowledge as web developer.
+
+### Stack
+- Hugo (Static Site Generator)
+- Tailwindcss
+- Netlify
+
+### Follow my social media
+- [Twitter](https://twitter.com/nurofsun)
+- [Instagram](https://instagram.com/nurofsun)
+
+## Todo
+[ ] Adding Dark Theme
+[ ] Fix Typography Style for Dark Theme
