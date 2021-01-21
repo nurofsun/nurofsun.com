@@ -74,3 +74,45 @@ git config --global user.name "Your Name"
 git config --global user.email "Your Email"
 {{< /highlight >}}
 {{< /code >}}
+
+## Getting a Git Repository
+You typically can obtain a repository in one of these ways:
+- You can take a local directory/folder that's currently not under version control and turn it into a Git repo, or maybe
+- You can clone an existing repository from elsewhere.
+
+### Initialize Local Directory as Git Repository
+as I said before, if there's a local directory that's not under version
+control you can transform it as git repo with these steps:
+
+First create new directory and navigate to created directory.
+{{< code name="bash" >}}
+{{< highlight bash >}}
+$ mkdir ~/myProject
+$ cd ~/myProject
+{{< /highlight >}}
+{{< /code >}}
+
+Then, transform it as git repo with this command
+{{< code name="bash" >}}
+{{< highlight bash >}}
+$ git init
+{{< /highlight >}}
+{{< /code >}}
+
+{{< code name="output" >}}
+{{< highlight bash >}}
+Initialized empty Git repository in /home/nur/myProject/.git/   
+{{< /highlight >}}
+{{< /code >}}
+You will see the output as above, there's new directory called `.git`
+inside it.
+
+### Cloning an Exisiting Repo From Elsewhere
+If you have to working with existing repository you can actually clone with
+this command, in this case the source code hosted on github.
+
+{{< code name="bash" >}}
+{{< highlight bash >}}
+$ git clone https://github.com/nurofsun/onescroll
+{{< /highlight >}}
+{{< /code >}}
