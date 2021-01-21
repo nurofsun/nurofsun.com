@@ -1,0 +1,7 @@
+{
+  "Name": "Cotraid",
+  "Description": "Covid-19 tracking tool for Indonesia built with React.js",
+  "Image": "/images/cotraid-logo.svg",
+  "SourceUrl": "https://github.com/nurofsun/cotraid",
+  "DemoUrl": "https://cotraid.vercel.app"
+}
