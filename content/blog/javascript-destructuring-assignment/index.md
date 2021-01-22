@@ -1,6 +1,6 @@
 ---
-title: Javascript Destructuring Assigment
-slug: javascript-destructuring-assigment
+title: Javascript Destructuring Assignment
+slug: javascript-destructuring-assignment
 date: 2021-01-21T19:46:25+07:00
 lastmod: 2021-01-21T19:46:25+07:00
 description: "Learn about destructuring to producing good and readable code
