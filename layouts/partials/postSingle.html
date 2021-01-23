@@ -1,28 +1,38 @@
-<article>
+<article class="mb-6">
     <header class="py-3 mb-6">
         <h1 class="text-2xl md:text-4xl mb-4 font-bold">
             {{ .Title }}
         </h1>
-        <div class="flex flex-row items-center justify-between text-sm text-gray-500 mt-3">
-            <p class="date inline-flex">
-            <span class="icon mr-2">
-                {{- $calendarIcon := resources.Get "icons/calendar.svg" -}}
-                <img class="injectable w-5 h-auto" src="/icons/calendar.svg" alt="Post Date">
-            </span>
-            <time>{{ .Date.Format "January 2, 2006" }}</time>
-            </p>
-            <p class="readingtime">
-            {{ $readingTime := .ReadingTime }}
-            {{ $readingTime }} min 
-            </p>
+        <div class="flex flex-row items-center justify-between text-sm fill-current text-gray-500 mt-3">
+            <div>
+                <div class="author flex flex-row items-center">
+                    <span class="icon mr-2">
+                        <img class="injectable w-8 h-auto rounded-full" src="/images/banner.svg" alt="{{ .Params.Author }}">
+                    </span>
+                    <div>
+                        <p class="mb-1"><span>{{ .Params.Author }}</span></p>
+                        <time class="text-xs">{{ .Date.Format "January 2, 2006" }}</time>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p class="tag mb-2">
+                    {{ with .Params.Tags }}
+                    #{{ index . 0 }}
+                    {{ end }}
+                </p>
+                <p class="readingtime inline-flex">
+                    <span class="icon mr-2">
+                        <img class="injectable w-5 h-auto" src="/icons/time.svg" alt="Post's reading time">
+                    </span>
+                    {{ $readingTime := .ReadingTime }}
+                    {{ $readingTime }} min read
+                </p>
+            </div>
         </div>
     </header>
     <div class="prose prose-sm lg:prose-xl max-w-none">
         {{ .Content }}
     </div>
-    <footer class="py-4">
-        {{ with .Params.Tags }}
-        #{{ index . 0 }}
-        {{ end }}
-    </footer>
 </article>
