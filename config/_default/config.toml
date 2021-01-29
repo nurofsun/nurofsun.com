@@ -3,6 +3,7 @@ title = "Nurofsun"
 buildDrafts = true
 publishDir = "public"
 staticDir = "assets"
+enableRobotsTXT=true
 pygmentsUseClasses = true
 
 [menu]
