@@ -112,10 +112,10 @@ be used as shell command name.
 {{< /code >}}
 
 ### Make Package Globally Available
-Now, our app not globally available, that means we cannot run it with
+For now, our app not globally available, that means we cannot run it with
 `hello-cli` command.
 
-But, in this case we don't want to run our application
+But, in this case also we don't want to run our application
 as `hello-cli`. 
 
 Instead, we want to run this application by typing only `hello`, so to
@@ -134,7 +134,7 @@ Updated `package.json` as shown below.
 {{< /highlight >}}
 {{< /code >}}
 
-Now we change the `index.js` file permission by doing `chmod +x index.js`.
+We must change the `index.js` file permission by doing `chmod +x index.js`.
 Otherwise , you will received `permission denied` message when trying to run it.
 
 Then, after that we run command `npm link` or `yarn link` on the project directory.
