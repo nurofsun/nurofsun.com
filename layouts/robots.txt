@@ -1,4 +1,3 @@
 User-agent: *
 Disallow: /tags/*
 Disallow: /index.json$
-Sitemap: /sitemap.xml
