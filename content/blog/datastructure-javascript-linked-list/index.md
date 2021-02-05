@@ -1,5 +1,5 @@
 ---
-title: "Data Structure With Javascript: Linked List"
+title: "Data Structure In Javascript: Linked List"
 slug: data-structure-javascript-linked-list
 date: 2021-01-29T08:12:20+07:00
 lastmod: 2021-01-29T08:12:20+07:00
