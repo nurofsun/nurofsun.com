@@ -1,16 +1,58 @@
 ---
-title: "Typescript Tutorial: The Handbook For Beginner"
-slug: typescript-tutorial
-date: 2021-01-23T09:49:03+07:00
-lastmod: 2021-01-23T09:49:03+07:00
-description: "the handbook for people who just start to learn typescript"
-tags: ["typescript", "tutorial"]
+title: "TypeScript Tutorial: Overview and Complete Beginner's Guide"
+slug: typescript-tutorial-beginner
+date: 2021-02-04T09:49:03+07:00
+lastmod: 2021-02-04T09:49:03+07:00
+description: "Reason why you should start using typescript, this is
+typescript tutorial for beginner which has background as javascript
+enthusiast"
+tags: ["typescript", "programming", "webdevelopment"]
 featured: "./cover.png"
 author: Nurahmat
 draft: true
 ---
+You might wondering right now and some question come on your mind "What's
+typescript?", "Why should I learn typescript? What is the reason?", and "Do
+I get benefit by learning this language?".
 
 {{< toc >}}
+
+## What's TypeScript?
+TypeScript is "typed javascript at any scale" that said on the official website,
+basically this is open-source language builds with JavaScript, by adding
+static type definitions it become the world's most used tool nowadays.
+
+## Why You Should Learn TypeScript?
+You must to answer this question preventing you from wasting time, if you
+still get stuck let me help you to give some reasons then you can decide
+the next step.
+
+It stands an unusual relationship with JavaScript because TypeScript offers
+all JS feature and an additional layer on top of these which is
+TypeScript's type system.
+
+JavaScript provide primitive language such as `string`, `number`, and
+`object`, but it doesn't check that you have assign it with correct type
+data. **TypeScript has this ability, no need conditional
+statement.**.
+### The Reasons
+- **Don't Need Additional Code For Type Checking.** Writing types can be optional in TypeScript but with
+    this feature you get more power without writing any additional code.
+- **Debugging Make Easier.** Well, JavaScript is often great for the
+    flexibility but when it become unreliable, and buggy, what you wanna do? Debug it, right?. The first fact that encourage me to learn
+    this tool is that typescript will organize the code and catch errors before the runtime.
+- **Integrated with popular Text Editors.** TypeScript development team
+    have been doing a hard work to make it more consistenly good tooling, TypeScript
+    already made integration with popular text editors out there such as
+    VSCode, Vim, Sublime Text, Nova, Atom, Emacs, WebStorm, and Eclipse.
+- **Tomorrow's JavaScript, Today.** TypeScript provide transpiler that
+    convert our TypeScript code (i.e Javascript version ES6 and beyond + types) to **ES5** or even **ES3**.
+    So, we can use the latest and modern version of JavaScript to become
+    compatible with today browsers.
+
+You already get answer right now! Then why don't you start to use it? If
+you want to start using this awesome tool, Let's jump to the next step I'll
+give the Installation instruction and run typescript locally.
 
 ## Installation
 Official documentation of typescript offering 3 installation routes, but I
@@ -43,7 +85,7 @@ let variableName: dataType = Value
 {{< /highlight >}}
 {{< /code >}}
 
-### Boolean
+### 1. Boolean
 Now, let's just take a look how to declare variable that has value boolean data
 type aka `true/false`.
 {{< code name="typescript" >}}
@@ -52,7 +94,7 @@ let isUserExist: boolean = true;
 {{< /highlight >}}
 {{< /code >}}
 
-### Number and BigInt
+### 2. Number and BigInt
 For data that has `number` and `bigint` type, you can declare it as shown below.
 {{< code name="typescript" >}}
 {{< highlight typescript >}}
@@ -64,7 +106,7 @@ let big: bigint = 100n;
 {{< /highlight >}}
 {{< /code >}}
 
-### String
+### 3. String
 Another fundamental data type is `string` to create set of characters on
 your program then become a word and sentence.
 {{< code name="typescript" >}}
@@ -83,7 +125,7 @@ let sentence: string = `Hello my name is ${myName} and I ${myAge} years old.`
 {{< /highlight >}}
 {{< /code >}}
 
-### Array
+### 4. Array
 Typescript also allowing you to use Array data type with these following
 methods.
 
@@ -103,7 +145,7 @@ let theirPoints: number[] = [100, 75, 80]
 {{< /highlight >}}
 {{< /code >}}
 
-### Tuple
+### 5. Tuple
 Allow you to express an array with fixed (number of elements) length, but
 not need be the same type. So, this data type should use on the correct
 case.
@@ -158,7 +200,7 @@ console.log(userDetails[3]);
 {{< /highlight >}}
 {{< /code >}}
 
-### Enum
+### 6. Enum
 as in `C#` Language like, This is sets of numeric values that has more friendly name. 
 {{< code name="typescript" >}}
 {{< highlight typescript >}}
@@ -232,7 +274,7 @@ console.log(colorName);
 {{< /highlight >}}
 {{< /code >}}
 
-### Unknown
+### 7. Unknown
 `unknown` quite helpful if you don't really know what the data type would
 be assigned to a variable because it has dynamic content. This type of data
 accept all values either it can be `string`, `boolean`, `number`, and
@@ -250,7 +292,7 @@ console.log(dateCreated)
 {{< /highlight >}}
 {{< /code >}}
 When I run this code, there's no error output appear.
-### Any
+### 8. Any
 this type of data make you take less amount of effort even you don't need
 anymore to do **type checking**, this case would be your best choice if you
 facing a problem with **type information** that's not available on
@@ -307,7 +349,7 @@ let someProperty = exampleObject.a.b.c;
 of losing type safety. Type safety is one of the motivations for using
 Typescript and you should try to avoid using `any` when it's not necessary.
 
-### Void
+### 9. Void
 Well, this type of data usually used for function that doesn't return a
 value.
 {{< code name="typescript" >}}
@@ -319,7 +361,7 @@ greeting();
 {{< /highlight >}}
 {{< /code >}}
 
-### Null and Undefined
+### 10. Null and Undefined
 Both `undefined` and `null` have their types named `undefined` and `null`
 respectively.
 
@@ -335,5 +377,7 @@ By default both are subtypes of all other types. That means you can assign
 the --strictNullChecks flag, null and undefined are only assignable to
 unknown, any, also void**
 
-### Never
+### 11. Never
 The `never` type is used as return type of functions that never return, 
+
+## Interfaces
