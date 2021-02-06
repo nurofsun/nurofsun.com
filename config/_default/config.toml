@@ -1,6 +1,7 @@
 baseURL = "http://localhost:1313"
 title = "Nurofsun"
 
+buildDrafts = true
 publishDir = "public"
 staticDir = "assets"
 
