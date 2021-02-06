@@ -1,10 +1,22 @@
 baseURL = "http://localhost:1313"
 title = "Nurofsun"
-buildDrafts = true
+
 publishDir = "public"
 staticDir = "assets"
-enableRobotsTXT=true
+
+enableEmoji = true
+enableRobotsTXT = true
+canonifyURLs = true
 pygmentsUseClasses = true
+
+[params]
+ featuredImage = "site-featured-image.png" 
+ logo = "logo.png"
+ author = "Nurahmat"
+ github = "https://github.com/nurofsun"
+ twitter = "@nurofsun"
+ description = "Skillful Web Developer and Creative Graphic Designer"
+ copyright = "Nurofsun's Blog"
 
 [menu]
   [[menu.main]]
@@ -19,7 +31,7 @@ pygmentsUseClasses = true
     url = "/contact"
 
 [permalinks]
-   article = "/:slug/"
+   blog = "/:slug/"
 
 [outputs]
   home = ["HTML", "JSON", "RSS"]

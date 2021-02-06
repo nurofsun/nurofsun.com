@@ -1,5 +1,3 @@
 baseURL="https://nurofsun.com"
 buildDrafts = false
-publishDir = "public"
-pygmentsUseClasses=true
 googleAnalytics = "UA-187534022-3"
