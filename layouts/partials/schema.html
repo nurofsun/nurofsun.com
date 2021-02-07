@@ -12,6 +12,8 @@
 </script>
 {{ else if .IsPage }}
 {{- if eq .Section "blog" -}}
+{{ $images := $.Resources.ByType "image" -}}
+{{ $featured := $images.GetMatch "*cover*" -}}
 <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -29,7 +31,7 @@
       "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
       "image": {
         "@type": "imageObject",
-        "url": {{ if .Params.Image }}{{ .Permalink }}{{ else }}{{ .Site.Params.featuredImage | absURL }}{{ end }}
+        "url": {{ with $featured }}{{ .Permalink }}{{ else }}{{ .Site.Params.featuredImage | absURL }}{{ end }}
       },
       "publisher": {
         "@type": "Organization",
