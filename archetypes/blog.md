@@ -6,6 +6,6 @@ lastmod: {{ .Date }}
 description: ""
 tags: []
 featured: "./cover.png"
-author: {{ .Site.Params.AuthorName }}
+author: {{ .Site.Params.Author }}
 draft: true
 ---
