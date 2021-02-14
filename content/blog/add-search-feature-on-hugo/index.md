@@ -3,11 +3,12 @@ title: How To Add Search Feature on Hugo (Without Library)
 slug: search-feature-on-hugo
 date: 2021-02-10T14:11:02+07:00
 lastmod: 2021-02-10T14:11:02+07:00
-description: ""
-tags: []
+description: "Adding search feature on hugo website without any third-party
+such as hugo-elasticsearch adn hugo-lunr"
+tags: ["hugo", "ssg", "tips"]
 featured: "./cover.png"
 author: "Nurahmat"
-draft: true
+draft: false
 ---
 "It's finally alive!" that's what I said when I finally complete my blog
 with amazing Hugo, the most fastest SSG ever! That's my opinion.
