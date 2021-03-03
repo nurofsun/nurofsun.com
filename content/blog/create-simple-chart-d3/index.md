@@ -27,8 +27,6 @@ Just because I have related project that need visualize its data on the
 dashboard page, and also it would be better to go out from the comfort zone
 by learning something new.
 
-{{< toc >}}
-
 ## Environment Setup
 In this tutorial I will give you how to use this library on your browser
 with production build of D3, you can download it from [ D3 Official Website ](https://d3js.org/)

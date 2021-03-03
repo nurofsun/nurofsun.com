@@ -13,8 +13,6 @@ In my deepest heart saying to myself that I was a beginner in this
 programming world and remind me that to **Stay hungry, and curious**, I got
 my new idea when I use cli tool called **cra (create-react-app)**.
 
-{{< toc >}}
-
 Begin thinking how this thing was developed, I'm sure that it has been written with JavaScript 
 because I install this tool through npm/yarn.
 

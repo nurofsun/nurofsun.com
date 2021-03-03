@@ -25,8 +25,6 @@ below.
 > **Note !** I only give you the basic implementation neither the style or
 javascript code, I believe you can do it by yourself.
 
-{{< toc >}}
-
 You see it? Well, how amazing is it! In this article I'm gonna share with
 you how I do it, keep reading!
 

@@ -19,8 +19,6 @@ wondering as Beginner at Cascading StyleSheet (CSS).
 Umm, wait that's why I write this article, I know how to
 do it with some different methods.
 
-{{< toc >}}
-
 ## Initialization
 Before that, we create the initial css style such as resetting the css,
 styling `.center` and `.child` selector.

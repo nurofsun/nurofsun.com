@@ -1,12 +1,22 @@
-<nav class="navbar z-50 px-4 py-3 bg-white fixed top-0 inset-x-0 shadow-sm" role="navigation" aria-label="Main Navigation">
-  <div class="container flex items-center max-w-screen-lg mx-auto">
+<nav class="fixed inset-x-0 top-0 z-10 px-4 py-3 bg-white navbar shadow-sm" role="navigation" aria-label="Main Navigation">
+  <div class="container flex items-center mx-auto max-w-screen-lg">
     <a class="logo navbar-item md:w-auto flex-grow 
     fill-current {{ if .IsHome }}text-dove-gray-800{{ else }}text-gray-800{{ end }}" href="/" title="{{ $.Site.Title }}">
       <img class="injectable" 
          src="/images/logo-mobile.svg" alt="nurofsun's logo" width="32">
     </a>
     {{ partial "component/menu.html" . }}
-    {{ partial "component/searchInput.html" . }}
+    <button id="searchToggle">
+      <img class="injectable -200" src="/icons/search.svg" alt="Search Button">
+    </button>
+    <div class="fixed inset-0 z-10 flex justify-center hidden bg-white" id="searchInputContainer">
+        <button class="absolute top-0 right-0 px-3 py-2 text-gray-500" id="searchClose">
+            <span class="text-4xl">&times;</span>
+        </button>
+        <div class="flex-grow px-4 pt-16 max-w-screen-sm">
+        {{ partial "component/searchInput.html" . }}
+        </div>
+    </div>
   </div>
 </nav>
 <!-- search for mobile -->

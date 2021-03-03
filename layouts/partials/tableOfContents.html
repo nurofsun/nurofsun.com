@@ -1,0 +1,10 @@
+<button class="fixed bottom-0 right-0 z-50 px-3 py-3 m-3 overflow-hidden text-sm font-medium bg-gray-800 rounded-full fill-current text-gray-50" 
+        id="tocControl">
+    <img class="w-6 h-auto toc-open-icon md:w-8 injectable" src="/icons/toc.svg" alt="Table Of Contents">
+</button>
+<section class="fixed inset-0 z-20 flex items-center justify-center hidden p-3 bg-black bg-opacity-25" id="toc">
+    <div class="px-4 overflow-hidden bg-white rounded-lg prose prose-sm md:prose-md lg:prose-lg">
+        <h3 class="pt-3 mt-3 mb-2 text-lg font-bold">Table Of Contents</h3>
+        {{ .TableOfContents }}
+    </div>
+</section>

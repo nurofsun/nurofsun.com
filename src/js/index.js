@@ -26,10 +26,22 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error(error));
 
 
-    let searchInput = document.querySelector('#searchInput'),
+    let searchToggle = document.querySelector('#searchToggle'),
+        searchClose = document.querySelector('#searchClose'),
+        searchInputContainer = document.querySelector('#searchInputContainer'),
+        searchInput = document.querySelector('#searchInput'),
         searchResult = document.querySelector('#searchResult');
 
     let dataJSON;
+
+    searchClose.addEventListener('click', function() {
+        document.documentElement.classList.toggle('overflow-hidden')
+        searchInputContainer.classList.toggle('hidden')
+    })
+    searchToggle.addEventListener('click', function() {
+        document.documentElement.classList.toggle('overflow-hidden')
+        searchInputContainer.classList.toggle('hidden')
+    });
 
     // add keydown listener, when user hit '/', it will focus on search input (Desktop)
     window.addEventListener('keydown', function(event) {
@@ -100,26 +112,40 @@ document.addEventListener("DOMContentLoaded", function() {
     }, false);
 
 
-    function toc() {
+    function tocFeature() {
         return new Promise((resolve, reject) => {
-            let tocControl = document.querySelector('#toc-control');
-            let tocContent = document.querySelector('.toc #toc-content');
-            if (tocControl && tocContent) {
-                resolve({
-                    tocControl,
-                    tocContent
-                })
+            let elements = {
+                toc: document.querySelector('#toc'),
+                tocControl: document.querySelector('#tocControl'),
+                tocItems: document.querySelectorAll('#TableOfContents a'),
+            }
+            if (elements) {
+                resolve(elements)
             } else {
                 reject('Cannot find any table of contents in this page')
             }
         })
     }
-    toc()
-        .then(({tocControl, tocContent}) => {
+    tocFeature()
+        .then(({toc, tocControl, tocItems}) => {
             tocControl.addEventListener('click', function() {
-                tocContent.classList.toggle('hidden');
-                tocControl.classList.toggle('rotate-180');
+                document.documentElement.classList.toggle('overflow-hidden')
+                toc.classList.toggle('hidden');
             });
+            toc.addEventListener('click', function() {
+                if (!toc.classList.contains('hidden'))
+                {
+                    toc.classList.add('hidden')
+                }
+                document.documentElement.classList.toggle('overflow-hidden');
+            })
+            tocItems.forEach(item => item.addEventListener('click', function(event) {
+                event.stopPropagation();
+                toc.classList.add('hidden');
+                if (document.documentElement.classList.contains('overflow-hidden')) {
+                    document.documentElement.classList.remove('overflow-hidden')
+                }
+            }))
         })
         .catch(err => console.log(err));
 

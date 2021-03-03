@@ -14,8 +14,6 @@ JavaScript has grown nowadays, it doesn't stop just running on a browser but
 everywhere. Back to the time when JS neither running on the server-side nor a mobile, with Node.js you could actually use 
 this programming language for building a server, even REST API.
 
-{{< toc >}}
-
 In this article I'll give a clue how to building REST API server
 using JavaScript, I want to create a REST API for products list and adding
 CRUD functionality.

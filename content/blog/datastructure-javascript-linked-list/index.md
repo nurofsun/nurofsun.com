@@ -16,8 +16,6 @@ algorithm.
 The fact is that these things are very important to every programmer in
 this world, now I decided to put my time to learn about them.
 
-{{< toc >}}
-
 This is the first of data structure with javascript, I'll talk about Linked
 List datastructure in this article.
 

@@ -12,8 +12,6 @@ draft: false
 ---
 When the first time I coded with JS and understanding how the object works in javascript it makes me happy, I already level up my knowledge as JS learner.
 
-{{< toc >}}
-
 And I do the some thing funny during learn object, for example I create
 `Author` object that hold information about me as well, and print it out
 `Hello, my name is Nurahmat and I'm Web Developer`.

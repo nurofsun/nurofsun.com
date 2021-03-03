@@ -1,11 +1,11 @@
 <div class="relative">
-  <div class="bg-gray-100 block overflow-hidden rounded-lg fill-current">
-    <input class="w-full p-3 text-md bg-gray-50 text-gray-800 outline-none appearance-none hover:bg-gray-100 focus:bg-gray-100" id="searchInput" type="text" placeholder="Search..." aria-label="Search Anything" autocomplete="true">
-    <label for="searchInput" class="absolute transform -translate-y-96">Search Anything</label>
-    <span class="absolute right-0 inline-block m-3 top-0">
+  <div class="block bg-gray-100 rounded-lg fill-current">
+    <input class="w-full p-3 overflow-hidden text-gray-800 border border-gray-300 rounded-lg outline-none appearance-none focus:ring-4 transition duration-300 focus:ring-opacity-25 focus:ring-gray-500 text-md bg-gray-50 hover:bg-gray-100 focus:bg-gray-100" id="searchInput" type="text" placeholder="Search..." aria-label="Search Anything" autocomplete="true">
+    <label for="searchInput" class="absolute transform -translate-y-96">Search Post</label>
+    <span class="absolute top-0 right-0 inline-block mx-3 mt-3">
       <img class="injectable -200" src="/icons/search.svg" alt="Search Button">
     </span>
   </div>
-  <ul id="searchResult" class="absolute bg-white shadow rounded-lg px-3 z-50">
+  <ul id="searchResult" class="absolute z-50 mt-3 overflow-y-auto bg-white rounded-lg">
   </ul>
 </div>

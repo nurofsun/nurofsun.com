@@ -15,8 +15,6 @@ In this *article* I will help you to do it as well so keep reading!
 I recently used this tricks for almost my projects related with front-end development, so
 this is something new for me.
 
-{{< toc >}}
-
 ## Use CSS Reset
 This is popular opinion and almost developer out there using this way to enforce the style consistency on different
 browsers with a clean and slate for styling an elements. You may want to use *css reset library* which is you can find
