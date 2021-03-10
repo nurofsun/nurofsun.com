@@ -16,3 +16,5 @@ knowledge as web developer.
 ## Todo
 [ ] Adding Dark Theme
 [ ] Fix Typography Style for Dark Theme
+
+Thanks.
