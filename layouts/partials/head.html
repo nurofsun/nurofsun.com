@@ -4,12 +4,12 @@
 <meta name="google-site-verification" content="iXKeGcdrqxK2W4p0Iyb0angepszRsgLUlgLJLzXI678" />
 <meta name="title" content="{{ .Site.Title }}">
 {{- if .IsHome }}
-    <meta name="description" content="a place where you can learn more about web development from zero to hero">
+<meta name="description" content="{{ .Site.Params.metaDescription }}">
 {{ else }}
     {{- if .Params.Description }}
         <meta name="description" content="{{ .Params.Description }}">
     {{ else }}
-        <meta name="description" content="a place where you can learn more about web development from zero to hero">
+        <meta name="description" content="{{ .Page.Summary }}">
     {{ end -}}
 {{ end -}}
 <meta name="keywords" content="html, css, javascript, nodejs, webdevelopment, programming">
@@ -25,8 +25,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 {{- if .IsHome }}
-    <title>{{ $.Site.Title }}</title>
+<title>{{ .Site.Params.Subtitle }} - {{ $.Site.Title }}</title>
 {{- else -}}
-    <title>{{ .Title }} | {{ $.Site.Title }}</title>
+<title>{{ .Title }} | {{ $.Site.Title }}</title>
 {{- end -}}
 {{ partial "schema.html" . }}
