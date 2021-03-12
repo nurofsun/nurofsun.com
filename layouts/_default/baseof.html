@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language }}" class="pt-24">
+<html lang="{{ .Site.Language }}" {{ if not .IsHome }}class="pt-24"{{ end }}>
     <head>
         {{ partial "head.html" . }}
     </head>
     <body class="text-gray-800 bg-gray-50 dark:bg-gray-800 dark:text-white">
-        <a href="#root" class="hidden">
-            <img class="w-8 h-auto injectable text-gray-50 transform rotate-180" src="/icons/arrowdown.svg" alt="">
-        </a>
         <div id="root">
             {{ block "main" . }}
             {{ end }}

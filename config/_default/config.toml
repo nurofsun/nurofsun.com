@@ -16,14 +16,14 @@ pygmentsUseClasses = true
  author = "Nurahmat"
  github = "https://github.com/nurofsun"
  twitter = "@nurofsun"
- description = "Skillful Web Developer and Creative Graphic Designer"
+ description = "Learn how to program, and bring your idea into code"
  copyright = "Nurofsun's Blog"
 
 [menu]
   [[menu.main]]
     identifier = "blog"
-    title = "Articles"
-    name = "Articles"
+    title = "Blog"
+    name = "Blog"
     url = "/blog"
   [[menu.main]]
     identifier = "contact"

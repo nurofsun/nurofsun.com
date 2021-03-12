@@ -1,9 +1,16 @@
-<section class="py-10">
-    <div class="max-w-screen-lg mx-auto px-4">
-        <p class="block mb-2 md:mb-4 font-bold text-xl text-gray-900 md:text-4xl">Hello, I'm Nur</p>
-        <h1 class="text-lg text-gray-800 md:text-3xl">
-            {{ .Site.Params.Description }}
-        </h1>
+<section class="flex items-center h-screen md:min-h-screen md:justify-center">
+    <div class="flex flex-col-reverse md:flex-row">
+        <section class="w-full md:w-8/12 content">
+            <h2 class="mb-4 text-4xl font-bold text-gray-800 md:text-6xl md:leading-tight">
+                {{ .Site.Params.Description }}.
+            </h2>
+            <p class="font-light text-gray-600 subdescription md:text-xl">
+                I provide and cover up programming tips mostly about web development, it just<br>
+                a note for me that keep my knowledge and share it to you!
+            </p>
+        </section>
+        <section class="w-full md:w-4/12 content">
+            something
+        </section>
     </div>
 </section>
-

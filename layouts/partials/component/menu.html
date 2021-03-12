@@ -1,7 +1,9 @@
-<div class="flex flex-row items-center justify-center mr-3 md:static md:bg-transparent" id="navbarMenu">
+<div class="flex flex-row items-center justify-center ml-auto mr-3 md:static md:bg-transparent"
+    id="navbarMenu">
     {{- $currentPage := . -}}
     {{- range .Site.Menus.main }}
-    <a class="p-2 text-sm font-medium text-gray-800 md:text-base hover:text-gray-600 hover:underline transition duration-100" href="{{ .URL }}" title="Home">
+    <a class="p-2 text-sm font-medium text-gray-800 md:mr-3 md:text-base hover:text-gray-600 hover:underline transition duration-100" 
+        href="{{ .URL }}" title="Home">
         {{ .Name }}
     </a>
     {{ end -}}
