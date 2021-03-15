@@ -1,29 +1,33 @@
 {{ $related := $.Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
-<section id="relatedPosts" class="p-3">
+<section id="related-posts">
     <header>
-        <h4 class="inline-block mb-3 text-xl font-bold uppercase border-b-2 border-gray-200">
+        <h3 class="inline-block mb-3 text-lg font-bold uppercase border-b-2 border-gray-200">
             Related Posts
-        </h4>
+        </h3>
     </header>
-    <section>
+    <div class="content">
         {{ range . }}
-        <article class="relative p-3 mb-2 bg-white border-2 border-gray-500 rounded-lg hover:bg-gray-800 hover:text-gray-50 duration-300 transition">
+        <article class="relative p-3 mb-3 overflow-hidden bg-white border-4 border-gray-500 rounded-lg hover:bg-gray-800 hover:text-gray-50 transition duration-200" 
+            id={{ .Slug }}>
             <header>
-                <h4 class="mb-3 font-medium">
+                <h4 class="mb-3 font-bold">
                     {{ .Title }}
                 </h4>
-                <div class="flex flex-row text-sm fill-current">
-                    <div class="flex flex-row text-sm fill-current">
-                        <span class="inline-block mr-2 icon">
-                            <img class="w-5 h-auto injectable" src="/icons/calendar.svg" alt="post created date">
-                        </span>
-                        <time>{{ .Date.Format "January, 2 2006" }}</time>
-                    </div>
             </header>
-            <a href="{{ .RelPermalink }}" class="absolute inset-0"></a>
+            <div class="flex flex-row text-sm fill-current attributes">
+                <p class="inline-flex date">
+                    <span class="inline-block mr-2 icon">
+                        <img class="w-5 h-auto injectable" src="/icons/calendar.svg" alt="post created date">
+                    </span>
+                    <time>{{ .Date.Format "January, 2 2006" }}</time>
+                </p>
+            </div>
+            <footer>
+                <a href="{{ .RelPermalink }}" class="absolute inset-0" title={{ .Title }}></a>
+            </footer>
         </article>
         {{ end }}
-    </section>
+    </div>
 </section>
 {{ end }}

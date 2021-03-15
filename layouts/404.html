@@ -1,10 +1,11 @@
 {{ define "main" }}
-  <main class="hero is-fullheight is-primary">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <h1 class="title is-size-1">404 NOT FOUND</h1>
-        <a class="button is-large is-primary is-light" href="/" role="button">Home</a>
-      </div>
-    </div>
-  </main>
+<main id="404-page" class="container flex items-center justify-center h-screen px-4 mx-auto">
+    <section>
+        <h1 class="mb-3 text-xl font-bold uppercase md:text-4xl">404 NOT FOUND</h1>
+        <p class="subtitle">
+            Uh oh! The page missing out, it's time to back
+            <a class="font-medium underline" href="/" title="Home">Home</a>
+        </p>
+    </section>
+</main>
 {{ end }}

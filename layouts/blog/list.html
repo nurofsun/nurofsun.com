@@ -2,12 +2,12 @@
 <header>
   {{ partial "component/navbar.html" . }}
 </header>
-<main id="blog" class="max-w-screen-lg mx-auto px-4">
+<main id="blog" class="px-4 mx-auto max-w-screen-lg">
     <div class="flex flex-row flex-wrap">
-        <section class="feed w-full md:w-8/12 md:px-2">
+        <section class="w-full feed md:w-8/12 md:px-2">
             <header class="mb-4">
-                <h1 class="text-xl md:text-4xl mb-2 font-bold">
-                   {{ .Params.Subtitle }}
+                <h1 class="mb-2 text-xl font-bold md:text-4xl">
+                    {{ .Title }}
                 </h1>
                 <p class="text-sm md:text-xl">
                     {{ .Params.Description }}
