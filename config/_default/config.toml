@@ -1,13 +1,7 @@
-baseURL = "http://localhost:1313"
 title = "Nurofsun"
-
-buildDrafts = true
 publishDir = "public"
 staticDir = "assets"
-
 enableEmoji = true
-enableRobotsTXT = true
-canonifyURLs = true
 pygmentsUseClasses = true
 
 [params]
@@ -16,8 +10,8 @@ pygmentsUseClasses = true
  author = "Nurahmat"
  github = "https://github.com/nurofsun"
  twitter = "@nurofsun"
- subtitle = "Modern Web Development Tips for Free"
- description = "Learn about web development free and fun"
+ subtitle = "Front-End Web Developer & Graphic Designer"
+ description = "Build Your Business With Creativity and Code"
  metaDescription = "Looking for a new tips about web development? you're in the right place because it's free, and become a great developer."
  copyright = "Nurofsun's Blog"
 
@@ -27,11 +21,6 @@ pygmentsUseClasses = true
     title = "Blog"
     name = "Blog"
     url = "/blog"
-  [[menu.main]]
-    identifier = "about"
-    title = "About"
-    name = "About"
-    url = "/about"
   [[menu.main]]
     identifier = "contact"
     title = "Contact"

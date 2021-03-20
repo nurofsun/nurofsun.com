@@ -1,3 +1,5 @@
 baseURL="https://nurofsun.com"
 buildDrafts = false
 googleAnalytics = "UA-187534022-3"
+enableRobotsTXT = true
+canonifyURLs = true
