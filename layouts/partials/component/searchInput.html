@@ -1,11 +1,14 @@
-<div class="relative">
-  <div class="block bg-gray-100 rounded-lg fill-current">
-    <input class="w-full p-3 overflow-hidden text-gray-800 border border-gray-300 rounded-lg outline-none appearance-none focus:ring-4 transition duration-300 focus:ring-opacity-25 focus:ring-gray-500 text-md bg-gray-50 hover:bg-gray-100 focus:bg-gray-100" id="searchInput" type="text" placeholder="Search..." aria-label="Search Anything" autocomplete="true">
-    <label for="searchInput" class="absolute transform -translate-y-96">Search Post</label>
-    <span class="absolute top-0 right-0 inline-block mx-3 mt-3">
-      <img class="injectable -200" src="/icons/search.svg" alt="Search Button">
-    </span>
-  </div>
-  <ul id="searchResult" class="absolute z-50 mt-3 overflow-y-auto bg-white rounded-lg">
-  </ul>
+<div class="px-4 mx-auto max-w-screen-lg">
+    <div class="relative w-full p-3">
+        <label class="absolute transform -translate-y-96" for="searchInput">Search Post</label>
+        <input 
+         class="w-full p-3 overflow-hidden text-gray-800 bg-white border border-gray-500 appearance-none rounded-md focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-75 duration-200 transition"
+         type="text" id="searchInput" aria-label="Search Article" autocomplete="true" placeholder="Search something...">
+        <span class="absolute top-0 right-0 inline-block p-3 m-3">
+            <img class="injectable -200" src="/icons/search.svg" alt="Search Button">
+        </span>
+    </div>
+    <!-- search result -->
+    <ul id="searchResult" class="w-full mt-3 overflow-auto bg-white h-75">
+    </ul>
 </div>

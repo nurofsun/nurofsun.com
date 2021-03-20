@@ -2,25 +2,26 @@
 <header>
   {{ partial "component/navbar.html" . }}
 </header>
-<main id="blog" class="px-4 mx-auto max-w-screen-lg">
-    <div class="flex flex-row flex-wrap">
-        <section class="w-full feed md:w-8/12 md:px-2">
-            <header class="mb-4">
-                <h1 class="mb-2 text-xl font-bold md:text-4xl">
-                    {{ .Title }}
-                </h1>
-                <p class="text-sm md:text-xl">
-                    {{ .Params.Description }}
-                </p>
-            </header>
+<main class="container flex flex-col px-4 mx-auto max-w-screen-lg md:flex-row"
+    id="blog">
+    <section class="w-full md:w-8/12">
+        <header class="mb-4">
+            <h1 class="mb-2 text-xl font-bold md:text-4xl">
+                {{ .Title }}
+            </h1>
+            <p class="text-sm text-gray-700 md:text-base">
+            Here's the list of great articles related with programming and web development. Happy reading!
+            </p>
+        </header>
+        <div class="feed">
             {{ range .Paginator.Pages }}
                 {{ partial "postList.html" . }}
             {{ end }}
             {{ partial "component/pagination.html" . }}
-        </section>
-        <div class="w-full md:w-4/12 md:px-2">
-            {{ partial "sidebar.html" . }}
         </div>
+    </section>
+    <div class="w-full md:ml-3 md:w-4/12">
+    {{ partial "sidebar.html" . }}
     </div>
 </main>
 {{ end }}

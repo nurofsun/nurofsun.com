@@ -2,31 +2,33 @@
 <header>
     {{ partial "component/navbar.html" . }}
 </header>
-<main class="container px-4 mx-auto bg-white max-w-screen-md">
-    <section id="contact">
+<main id="contact" class="px-4 mx-auto bg-white max-w-screen-md">
+    <section>
         <header class="mb-4">
-            <h1 class="mb-2 text-4xl font-bold">Contact</h1>
-            <h2 class="text-lg text-gray-600">Hello, Would you like to work with me? Then contact me now.</h2>
+            <h1 class="mb-3 text-4xl font-bold md:text-6xl">Contact</h1>
+            <h2>Need someone who can crafting your website and logo? Then you can send me a message here.</h2>
         </header>
         <form action="https://getform.io/f/6b3695c9-5047-4841-9bda-69f67f220dc3" method="POST">
             <p class="mb-4 field">
-                <input class="w-full p-3 text-gray-700 bg-white border border-gray-200 rounded-md transition duration-200 hover:border-gray-500 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50" 
-                    type="text" name="name" placeholder="Full Name">
+                <input class="w-full p-3 text-base text-gray-800 bg-white border border-gray-500 rounded transition duration-200 hover:border-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-75" 
+                type="text" name="name" placeholder="Full Name">
             </p>
 
             <p class="mb-4 field">
-                <input class="w-full p-3 text-gray-700 bg-white border border-gray-200 rounded-md transition duration-200 hover:border-gray-500 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50" 
-                    type="email" name="email" placeholder="example@mail.com">
+                <input class="w-full p-3 text-base text-gray-800 bg-white border border-gray-500 rounded transition duration-200 hover:border-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-75" 
+                type="email" name="email" placeholder="example@mail.com">
             </p>
 
             <p class="mb-4 field">
-                <textarea class="w-full p-3 text-gray-700 bg-white border border-gray-200 rounded-md transition duration-200 hover:border-gray-500 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50" 
-                    name="message" placeholder="Write message..." value="">
-                </textarea>
+                <textarea class="w-full p-3 text-gray-800 bg-white border border-gray-500 rounded transition duration-200 hover:border-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-200 focus:ring-opacity-75"
+                    name="message" cols="30" rows="10" placeholder="Write Message..."></textarea>
             </p>
-
-            <p class="mb-4 field">
-                <button class="p-3 overflow-hidden border rounded-md focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 border-dove-gray-800" type="submit">Send Message</button>
+            
+            <p class="field">
+            <button class="p-3 overflow-hidden border border-gray-500 rounded-md focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-75 hover:bg-gray-800 transition duration-200 hover:bg-gray-900 hover:text-gray-50" 
+                type="submit">
+                Send Message
+            </button>
             </p>
         </form>
     </section>
