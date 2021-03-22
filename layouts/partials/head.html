@@ -19,10 +19,10 @@
 {{ end -}}
 {{- template "_internal/opengraph.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}
-{{- partial "favicon.html" . -}}
+{{- partial "seo/favicon.html" . -}}
 {{- if .IsHome }}
 <title>{{ .Site.Params.Subtitle }} - {{ $.Site.Title }}</title>
 {{- else -}}
 <title>{{ .Title }} | {{ $.Site.Title }}</title>
 {{- end -}}
-{{- partial "schema.html" . -}}
+{{- partial "seo/schema.html" . -}}

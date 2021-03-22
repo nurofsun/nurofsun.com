@@ -15,7 +15,7 @@
         </header>
         <div class="feed">
             {{ range .Paginator.Pages }}
-                {{ partial "postList.html" . }}
+                {{- partial "section/postList.html" . -}}
             {{ end }}
             {{ partial "component/pagination.html" . }}
         </div>
