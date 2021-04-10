@@ -3,6 +3,7 @@ publishDir = "public"
 staticDir = "assets"
 enableEmoji = true
 pygmentsUseClasses = true
+buildDrafts = true
 
 [params]
  featuredImage = "site-featured-image.png" 
