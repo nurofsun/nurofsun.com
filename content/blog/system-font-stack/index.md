@@ -1,6 +1,6 @@
 ---
 title: "System Font Stack CSS: How and Why You Should Use It"
-slug: system-font-stack
+slug: css-system-font-stack
 date: 2021-04-10T08:01:36+07:00
 lastmod: 2021-04-10T08:01:36+07:00
 description: "CSS Tips about how to use system font stack, the
